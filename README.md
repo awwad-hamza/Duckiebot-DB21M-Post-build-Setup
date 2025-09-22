@@ -13,6 +13,8 @@ Hopefully, this will save future students some time (and frustration!) and make 
 
 
 ## SD Card Initialization
+I started from this point and assumed that all steps prior to the SD card initialization in the [Laptop Setup](https://docs.duckietown.com/daffy/opmanual-duckiebot/setup/setup_laptop/index.html) section have already been completed.
+
 Insert your SD card into your computer using an adapter, then choose a **HOSTNAME** for your Duckiebot.  
 (I used `DB21M` for configuratoin since that’s what we have in the lab.)
 
@@ -89,7 +91,53 @@ To see your current connections:
 nmcli connection show
 ```
 
+Now you can disconnect the Ethernet cable and connect your computer to the same Wi-Fi network as your Duckiebot.  
+Once both are on the same network, the Duckiebot should appear when you run:  
+
+```bash
+dts fleet discover
+```
+
+> **Notes:**
+> - Connecting the Duckiebot to the university network or eduroam can be tricky. Even if it connects, it often causes problems when trying to access the Duckiebot from your computer. Using a mobile hotspot or a home network usually works much better.
+> - Many issues happen simply because you’re not sure whether you’re SSH’ed into the Duckiebot or running commands on your host computer. Double-check which terminal you’re in before troubleshooting.
+
+## Debugging & Updates
+Before doing anything else, make sure your Duckiebot software and Duckiebattery are up to date.  
+Follow the official instructions here:
+
+- [Duckiebot Update](https://docs.duckietown.com/daffy/opmanual-duckiebot/debugging_and_troubleshooting/update/index.html)  
+- [Duckiebattery Update](https://docs.duckietown.com/daffy/opmanual-duckiebot/debugging_and_troubleshooting/update/duckiebattery-update.html)
+
+If you encounter errors with Docker, they’re often caused by incorrect date & time settings or other minor issues.  
+You can fix this on the Duckiebot by running:
+
+```bash
+sudo date -s "yyyy-mm-dd hh:mm:ss"
+sudo apt update
+sudo apt install --reinstall ca-certificates
+sudo systemctl restart docker
+sudo reboot
+```
+
 ## Dashboard Setup
 Check out the [official documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/setup/setup_dashboard/index.html) for setting up the dashboard.  
 Once it’s running, make sure to test all the hardware components from the dashboard and confirm that everything is working properly.
 
+if your duckiebot does not recognize the HUT (Dashboard > Robot > Components) check out this piece of documentation [Re-flash Microcontroller](https://docs.duckietown.com/daffy/opmanual-duckiebot/debugging_and_troubleshooting/reflash_mc/index.html).
+
+> **Note:** If the ToF sensor is not detected, go back to step 56 in the [official documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/assembly/db21m/index.html).  
+> The issue is most likely due to following the instructions in the `Attention` section.  
+> 
+> To fix it, reconnect the ToF sensor while **ignoring the `Attention` note**:  
+> 1. Connect the ToF sensor to the front bumper using channel 6 with the short 4-pin cable.  
+> 2. Then, connect channel 6 from the bumper to its place on the Raspberry Pi using the long 4-pin cable.  
+>
+> This should resolve the detection issue.
+
+
+## Duckiebot Operations and Calibrations
+You’re now ready to test the basic operations of your Duckiebot and perform the necessary calibrations.  
+Follow the official documentation for guidance [here](https://docs.duckietown.com/daffy/opmanual-duckiebot/operations/handling/db21.html), and you can also try the [lane following demo](https://docs.duckietown.com/daffy/opmanual-duckiebot/demos/index.html) to make sure everything is working properly.
+
+Once that’s done, you can explore the [learning experiences](https://docs.duckietown.com/daffy/opmanual-duckiebot/lx/index.html) or dive straight into writing your own software for the Duckiebot after reviewing the [developer manual](https://docs.duckietown.com/daffy/devmanual-software/intro.html).
