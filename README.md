@@ -49,7 +49,7 @@ So, here’s a simple guide to set it up over Wi-Fi.
 (In my opinion, this method is easier than the one in the [official documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/intro.html) — but feel free to use whichever works for you!)
 
 ### To be able to use wifi on your Duckiebot
-1. first ssh to your duckiebot (the default password for all duckiebots is "quackquack")
+1. first ssh to your duckiebot (the default username for all duckiebots is "duckie", default password is "quackquack")
 ```
 ssh duckie@hostname.local
 ```
