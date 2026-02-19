@@ -45,8 +45,7 @@ Then, connect to the Duckiebot using an Ethernet cable.
 You’re now directly linked to the robot and can run pretty much any command on it.  
 
 That said, it’s not ideal to have a moving robot tethered to your laptop with a cable.  
-So, here’s a simple guide to set it up over Wi-Fi.  
-(In my opinion, this method is easier than the one in the [official documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/intro.html) — but feel free to use whichever works for you!)
+So, here’s a simple guide to set it up over Wi-Fi.
 
 ### To be able to use wifi on your Duckiebot
 1. first ssh to your duckiebot (the default username for all duckiebots is "duckie", default password is "quackquack")
@@ -99,7 +98,7 @@ dts fleet discover
 ```
 
 > **Notes:**
-> - Connecting the Duckiebot to the university network or eduroam can be tricky. Even if it connects, it often causes problems when trying to access the Duckiebot from your computer. Using a mobile hotspot or a home network usually works much better. Another option is using the university network on your pc and bridging the network from the pc to the duckiebot as shown in the beginning of the Networking section. For more information check out [this section of the documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/debugging_and_troubleshooting/network_config/index.html).
+> - Connecting the Duckiebot to the university network or eduroam can be tricky. Even if it connects, it often causes problems when trying to access the Duckiebot from your computer. Using a mobile hotspot or a home network usually works much better. Another option is using the university network on your pc and bridging the network from the pc to the duckiebot as shown in the beginning of the [Networking](#networking) section. For more information check out [this section of the documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/debugging_and_troubleshooting/network_config/index.html).
 > - Many issues happen simply because you’re not sure whether you’re SSH’ed into the Duckiebot or running commands on your host computer. Double-check which terminal you’re in before troubleshooting.
 
 ## Debugging & Updates
