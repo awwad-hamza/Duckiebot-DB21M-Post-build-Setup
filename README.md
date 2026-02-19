@@ -41,8 +41,26 @@ This removes any old SSH keys for that host, preventing connection issues:
 ssh-keygen -f "$HOME/.ssh/known_hosts" -R "HOSTNAME.local"
 ```
 
-Then, connect to the Duckiebot using an Ethernet cable.  
+Then,
+1. Connect the Duckiebot to your laptop via an Ethernet cable.
+
+2. Make a new Ethernet connection:
+   1. Open **Network Settings…**  
+      *(or run the command `nm-connection-editor`)*
+   2. Click **“Add”**
+   3. Type → **Ethernet**
+   4. Connection Name: **“Shared to Duckiebot”**
+   5. Select **“IPV4”** tab
+   6. Select **Method**
+   7. Select **“Shared to other computers”**
+   8. Click **Apply**
+  
 You’re now directly linked to the robot and can run pretty much any command on it.  
+
+Now, you should be able to SSH to your Duckiebot:
+```
+ssh duckie@hostname.local
+```
 
 That said, it’s not ideal to have a moving robot tethered to your laptop with a cable.  
 So, here’s a simple guide to set it up over Wi-Fi.
