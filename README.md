@@ -5,7 +5,7 @@
 That said, it’s also helpful for anyone who’s feeling a bit lost during the post-build setup of the DB21M Duckiebot.
 
 After building my Duckiebot, I ran into a few hiccups during the post-build process.  
-Honestly, I found that the [official documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/intro.html) wasn’t super clear (at least for me).  
+The [official documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/intro.html) does not have everthing in sequential order but rather in separate subsections especially for the bugs that are consistent.  
 The order of steps felt a bit confusing, the information was scattered, some bugs I faced didn't have solutions in the documentation, and some parts were a bit too wordy.  
 
 So, I decided to summarize and reorder the key steps into a simple, easy-to-follow guide.  
