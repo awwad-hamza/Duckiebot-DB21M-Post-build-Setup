@@ -99,7 +99,7 @@ dts fleet discover
 ```
 
 > **Notes:**
-> - Connecting the Duckiebot to the university network or eduroam can be tricky. Even if it connects, it often causes problems when trying to access the Duckiebot from your computer. Using a mobile hotspot or a home network usually works much better.
+> - Connecting the Duckiebot to the university network or eduroam can be tricky. Even if it connects, it often causes problems when trying to access the Duckiebot from your computer. Using a mobile hotspot or a home network usually works much better. Another option is using the university network on your pc and bridging the network from the pc to the duckiebot as shown in the beginning of the Networking section. For more information check out [this section of the documentation](https://docs.duckietown.com/daffy/opmanual-duckiebot/debugging_and_troubleshooting/network_config/index.html).
 > - Many issues happen simply because you’re not sure whether you’re SSH’ed into the Duckiebot or running commands on your host computer. Double-check which terminal you’re in before troubleshooting.
 
 ## Debugging & Updates
